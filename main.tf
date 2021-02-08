@@ -20,6 +20,7 @@ module "ec2_module" {
   source = "./ec2_module"
   vpc_test_id = module.vpc_module.vpc_test_id
   public_subnet_id_1 = module.vpc_module.public_subnet_id_1
+  public_subnet_id_2 = module.vpc_module.public_subnet_id_2
   security_group_elb = module.elb_module.security_group_elb
 
 }
