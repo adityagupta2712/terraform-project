@@ -5,7 +5,9 @@ This terraform project will create two-tier infrastructure in AWS cloud.
 Based on your machine install below requirements-
 
 steps to use this repository-
+
 1- install aws-cli -- https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+
 2- install terraform -- https://learn.hashicorp.com/tutorials/terraform/install-cli
 
 3- create a aws profile in your aws credentials files to use with terraform -
@@ -15,6 +17,7 @@ default path of credentials file <userhome>/.aws/credentials
 i have used singapore region for my infrastructure you can change according to your requirement.
 
 5- clone this project in your machine.
+
 6- run below commands inside project directory.
 
 a- terraform init (this command will initialize terraform in project folder).
