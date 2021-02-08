@@ -20,7 +20,9 @@ i have used singapore region for my infrastructure you can change according to y
 a- terraform init (this command will initialize terraform in project folder).
 
 b- terraform plan  (this command will list down all the resources it is going to create in aws).
+
 c- terraform apply (this command will create infrastructure in aws, to verify please login to console and verify).
+
 d- terraform destroy (this command will destroy all the infrastructure created with terraform apply).
   
   
