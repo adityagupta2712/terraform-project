@@ -12,8 +12,10 @@ module "elb_module" {
   vpc_test_id = module.vpc_module.vpc_test_id
   public_subnet_id_1 = module.vpc_module.public_subnet_id_1
   public_subnet_id_2 = module.vpc_module.public_subnet_id_2
+  public_subnet_id_3 = module.vpc_module.public_subnet_id_3
   ec2_name_1 = module.ec2_module.ec2_name_1
   ec2_name_2 = module.ec2_module.ec2_name_2
+  ec2_name_3 = module.ec2_module.ec2_name_3
 }
 
 module "ec2_module" {
@@ -21,6 +23,7 @@ module "ec2_module" {
   vpc_test_id = module.vpc_module.vpc_test_id
   public_subnet_id_1 = module.vpc_module.public_subnet_id_1
   public_subnet_id_2 = module.vpc_module.public_subnet_id_2
+  public_subnet_id_3 = module.vpc_module.public_subnet_id_3
   security_group_elb = module.elb_module.security_group_elb
 
 }

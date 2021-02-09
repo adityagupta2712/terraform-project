@@ -1,8 +1,7 @@
 #! /bin/bash
 sudo yum update -y
-sudo yum install -y git
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
-sudo yum install -y nodejs
+sudo yum install -y git nodejs mysql
 sudo git clone https://github.com/adityagupta2712/nodejs-mysql-crud.git /opt/nodejs-mysql-crud
 cd /opt/nodejs-mysql-crud
 echo "var config = {
@@ -21,4 +20,5 @@ echo "var config = {
 
 module.exports = config" | sudo tee /opt/nodejs-mysql-crud/config.js
 sudo npm install
-sudo node app.js
+sudo npm install pm2@latest -g
+sudo pm2 start app.js --name node-app

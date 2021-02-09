@@ -15,7 +15,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    security_groups = ["0.0.0.0/0"] #update this with your IP 
+    cidr_blocks = ["0.0.0.0/0"] #update this with your IP
   }
   ingress {
     # SSH Port 22 allowed from any IP

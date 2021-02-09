@@ -3,7 +3,7 @@ resource "aws_lb" "elb_test" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.elb_sg.id]
-  subnets            = [var.public_subnet_id_1,var.public_subnet_id_2]
+  subnets            = [var.public_subnet_id_1,var.public_subnet_id_2,var.public_subnet_id_3]
 
   enable_deletion_protection = false
     tags = {
@@ -39,6 +39,11 @@ resource "aws_lb_target_group_attachment" "test" {
 resource "aws_lb_target_group_attachment" "test1" {
   target_group_arn = aws_lb_target_group.test.arn
   target_id        = var.ec2_name_2
+  port             = 80
+}
+resource "aws_lb_target_group_attachment" "test2" {
+  target_group_arn = aws_lb_target_group.test.arn
+  target_id        = var.ec2_name_3
   port             = 80
 }
 
